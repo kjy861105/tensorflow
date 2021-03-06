@@ -32,9 +32,10 @@ RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip
 
-RUN python3 -m pip --no-cache-dir install --default-timeout=100  --upgrade \
-    "pip<20.3" \
+RUN pip3 --no-cache-dir install --default-timeout=100  --upgrade \
+    pip \
     setuptools
+RUN pip3 --version
 
 # Some TF tools expect a "python" binary
 RUN ln -s $(which python3) /usr/local/bin/python
@@ -48,7 +49,7 @@ RUN ln -s $(which python3) /usr/local/bin/python
 # Installs the latest version by default.
 ARG TF_PACKAGE=tensorflow
 ARG TF_PACKAGE_VERSION=
-RUN python3 -m pip install --default-timeout=100 --no-cache-dir ${TF_PACKAGE}${TF_PACKAGE_VERSION:+==${TF_PACKAGE_VERSION}}
+RUN pip3 install --default-timeout=100 --no-cache-dir ${TF_PACKAGE}${TF_PACKAGE_VERSION:+==${TF_PACKAGE_VERSION}}
 
 COPY bashrc /etc/bash.bashrc
 RUN chmod a+rwx /etc/bash.bashrc
