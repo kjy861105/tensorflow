@@ -21,7 +21,7 @@
 
 ARG UBUNTU_VERSION=18.04
 
-FROM ubuntu:${UBUNTU_VERSION} as base
+FROM 28680e87-kr1-registry.container.cloud.toast.com/ubuntu:${UBUNTU_VERSION} as base
 
 RUN apt-get update && apt-get install -y curl
 
