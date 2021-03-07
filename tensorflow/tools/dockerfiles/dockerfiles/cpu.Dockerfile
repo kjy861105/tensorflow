@@ -32,9 +32,9 @@ RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip
 
-RUN pip3 --no-cache-dir --retries 10 install --default-timeout=100  --upgrade \
-    pip \
-    setuptools
+#RUN pip3 --no-cache-dir --retries 10 install --default-timeout=100  --upgrade \
+#    pip \
+#    setuptools
 RUN pip3 --version
 
 # Some TF tools expect a "python" binary
