@@ -52,6 +52,7 @@ ARG TF_PACKAGE_VERSION=
 RUN pip3 --retries 10 install --default-timeout=100 --no-cache-dir ${TF_PACKAGE}${TF_PACKAGE_VERSION:+==${TF_PACKAGE_VERSION}}
 
 RUN pwd
+COPY bashrc /etc/bash.bashrc1
 
 COPY bashrc /etc/bash.bashrc
 RUN chmod a+rwx /etc/bash.bashrc
