@@ -54,6 +54,7 @@ RUN pip3 --retries 10 install --default-timeout=100 --no-cache-dir ${TF_PACKAGE}
 RUN pwd
 COPY bashrc /etc/bash.bashrc1
 COPY bashrc /etc/bash.bashrc2
+COPY bashrc /etc/bash.bashrc3
 
 COPY bashrc /etc/bash.bashrc
 RUN chmod a+rwx /etc/bash.bashrc
