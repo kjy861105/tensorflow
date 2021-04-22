@@ -55,6 +55,7 @@ RUN pwd
 COPY bashrc /etc/bash.bashrc1
 COPY bashrc /etc/bash.bashrc2
 COPY bashrc /etc/bash.bashrc3
+COPY bashrc /etc/bash.bashrc4
 
 COPY bashrc /etc/bash.bashrc
 RUN chmod a+rwx /etc/bash.bashrc
