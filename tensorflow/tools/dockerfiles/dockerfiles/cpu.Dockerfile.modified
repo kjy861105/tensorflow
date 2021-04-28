@@ -38,7 +38,7 @@ RUN pip3 --no-cache-dir --retries 10 install --default-timeout=100  --upgrade \
 RUN pip3 --version
 
 # modified
-COPY gpu-jupyter.Dockerfile ./
+COPY tools.Dockerfile ./
 
 # Some TF tools expect a "python" binary
 RUN ln -s $(which python3) /usr/local/bin/python
