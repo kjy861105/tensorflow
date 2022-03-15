@@ -21,8 +21,8 @@
 
 ARG UBUNTU_VERSION=18.04
 
-FROM 8dff71af-kr1-registry.container.cloud.toast.com/ubuntu:my-18.04 as base
-#FROM ed5274e0-kr1-registry.container.cloud.toast.com/kr1_pipelinie_registry_v2/ubuntu:my-18.04 as base
+# FROM 8dff71af-kr1-registry.container.cloud.toast.com/ubuntu:my-18.04 as base
+FROM ed5274e0-kr1-registry.container.cloud.toast.com/kr1_pipelinie_registry_v2/ubuntu:my-18.04 as base
 
 RUN apt-get update && apt-get install -y curl
 
